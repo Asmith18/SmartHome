@@ -25,8 +25,8 @@ class DeviceTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DeviceCell", for: indexPath) as? DeviceTableViewCell else {return UITableViewCell()}
         let deviceToUpdate = DeviceController.sharedInstance.devices[indexPath.row]
-//        cell.delegate = self
-            cell.updateViews(device: deviceToUpdate)
+        cell.delegate = self
+        cell.updateViews(device: deviceToUpdate)
         
         
         return cell
@@ -65,4 +65,16 @@ class DeviceTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
+}
+
+extension DeviceTableViewController: DeviceTableViewCellDelegate {
+    func isOnSwitchToggled(cell: DeviceTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else {return}
+        let urmom = DeviceController.sharedInstance.devices[indexPath.row]
+        DeviceController.sharedInstance.toggleIsOn(device: urmom)
+        cell.updateViews(device: urmom)
+        
+    }
+    
+    
 }
