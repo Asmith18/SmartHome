@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8YG-Y1-F7P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zwx-ym-hgL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +25,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="opJ-j3-K68">
-                                            <rect key="frame" x="36" y="19" width="374" height="40"/>
+                                            <rect key="frame" x="28" y="19" width="374" height="40"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(DeviceName)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwH-Np-RHH">
                                                     <rect key="frame" x="0.0" y="0.0" width="317" height="40"/>
@@ -42,8 +43,8 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="opJ-j3-K68" firstAttribute="trailing" secondItem="cUE-ln-MPw" secondAttribute="trailingMargin" constant="16" id="4KV-8M-bFB"/>
-                                        <constraint firstItem="opJ-j3-K68" firstAttribute="leading" secondItem="cUE-ln-MPw" secondAttribute="leadingMargin" constant="16" id="EyQ-eZ-QuY"/>
+                                        <constraint firstItem="opJ-j3-K68" firstAttribute="trailing" secondItem="cUE-ln-MPw" secondAttribute="trailingMargin" constant="8" id="4KV-8M-bFB"/>
+                                        <constraint firstItem="opJ-j3-K68" firstAttribute="leading" secondItem="cUE-ln-MPw" secondAttribute="leadingMargin" constant="8" id="EyQ-eZ-QuY"/>
                                         <constraint firstItem="opJ-j3-K68" firstAttribute="top" secondItem="cUE-ln-MPw" secondAttribute="topMargin" constant="8" id="P6F-WP-jiu"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="opJ-j3-K68" secondAttribute="bottom" constant="16" id="dSz-wZ-7Lp"/>
                                     </constraints>
@@ -71,10 +72,74 @@
             </objects>
             <point key="canvasLocation" x="473.91304347826093" y="119.86607142857142"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item 2-->
+        <scene sceneID="H0c-CO-XMR">
+            <objects>
+                <viewController id="UgJ-O1-iyg" customClass="ToggleAllViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NYW-Vb-C3y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vGw-Ba-DyS">
+                                <rect key="frame" x="158.5" y="407" width="97.5" height="82"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Bj-bK-31V">
+                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="31"/>
+                                        <color key="backgroundColor" red="0.0" green="0.37088657687875548" blue="1" alpha="0.2802211216517857" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Turn All On"/>
+                                        <connections>
+                                            <action selector="turnAllOnButtonTapped:" destination="UgJ-O1-iyg" eventType="touchUpInside" id="YZ2-Qs-8wp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzF-hq-On5">
+                                        <rect key="frame" x="0.0" y="51" width="97.5" height="31"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Turn All Off"/>
+                                        <connections>
+                                            <action selector="turnAllOffButtonTapped:" destination="UgJ-O1-iyg" eventType="touchUpInside" id="PY0-Xi-a59"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="obk-mB-QDD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vGw-Ba-DyS" firstAttribute="centerX" secondItem="NYW-Vb-C3y" secondAttribute="centerX" id="KOa-bQ-Dxk"/>
+                            <constraint firstItem="vGw-Ba-DyS" firstAttribute="centerY" secondItem="NYW-Vb-C3y" secondAttribute="centerY" id="hus-GD-bjf"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" image="link.circle" catalog="system" selectedImage="link.circle.fill" id="wPs-mM-iTJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ikW-DJ-AVE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1161" y="815"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wR0-VT-FFp">
+            <objects>
+                <tabBarController id="zwx-ym-hgL" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f5E-G9-OkC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8YG-Y1-F7P" kind="relationship" relationship="viewControllers" id="cjX-9d-7np"/>
+                        <segue destination="UgJ-O1-iyg" kind="relationship" relationship="viewControllers" id="pWg-za-U2a"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="COi-ZA-SFc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1162" y="120"/>
+        </scene>
+        <!--Power-->
         <scene sceneID="bBz-ep-3SR">
             <objects>
                 <navigationController id="8YG-Y1-F7P" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Power" image="power.circle" catalog="system" selectedImage="power.circle.fill" id="wYb-ER-jrj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Awz-zt-1Wr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -89,6 +154,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="link.circle" catalog="system" width="128" height="121"/>
+        <image name="link.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="power.circle" catalog="system" width="128" height="121"/>
+        <image name="power.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

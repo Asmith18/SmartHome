@@ -11,7 +11,8 @@ class DeviceTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(turnAllDevicesOn), name: TurnOnAllNotificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(turnAllDevicesOff), name: TurnAllOffNotificationName, object: nil)
     }
     
     // MARK: - Table view data source
@@ -30,6 +31,16 @@ class DeviceTableViewController: UITableViewController {
         
         
         return cell
+    }
+    
+    @objc func turnAllDevicesOn() {
+        DeviceController.sharedInstance.turnAllDevicesToOn()
+        tableView.reloadData()
+    }
+    
+    @objc func turnAllDevicesOff() {
+        DeviceController.sharedInstance.turnAllDevicesToOff()
+        tableView.reloadData()
     }
 
 //MARK: - Helper Func
@@ -53,17 +64,6 @@ class DeviceTableViewController: UITableViewController {
     
     @IBAction func addButton(_ sender: Any) {
         presentNewDeviceAlertController()
-    }
-    
-    
-    
-    
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
     }
 }
 

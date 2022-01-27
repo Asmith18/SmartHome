@@ -16,6 +16,7 @@
 		C270CA7A27A31BAE005A5372 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270CA7927A31BAE005A5372 /* DeviceTableViewCell.swift */; };
 		C270CA7C27A31C48005A5372 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270CA7B27A31C48005A5372 /* Device.swift */; };
 		C270CA7E27A31D17005A5372 /* DeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270CA7D27A31D17005A5372 /* DeviceController.swift */; };
+		C270CA8127A33ADF005A5372 /* ToggleAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270CA8027A33ADF005A5372 /* ToggleAllViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C270CA7927A31BAE005A5372 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		C270CA7B27A31C48005A5372 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		C270CA7D27A31D17005A5372 /* DeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceController.swift; sourceTree = "<group>"; };
+		C270CA8027A33ADF005A5372 /* ToggleAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleAllViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				C270CA7727A31A09005A5372 /* DeviceTableViewController.swift */,
+				C270CA8027A33ADF005A5372 /* ToggleAllViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C270CA5B27A31349005A5372 /* AppDelegate.swift in Sources */,
+				C270CA8127A33ADF005A5372 /* ToggleAllViewController.swift in Sources */,
 				C270CA7827A31A09005A5372 /* DeviceTableViewController.swift in Sources */,
 				C270CA5D27A31349005A5372 /* SceneDelegate.swift in Sources */,
 				C270CA7E27A31D17005A5372 /* DeviceController.swift in Sources */,

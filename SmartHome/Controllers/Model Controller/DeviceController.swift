@@ -65,4 +65,12 @@ class DeviceController {
         let url = documentDirectory.appendingPathComponent("device.json")
         return url
     }
+    
+    func turnAllDevicesToOn() {
+        devices.forEach({$0.isOn = true})
+    }
+    
+    func turnAllDevicesToOff() {
+        devices.forEach({$0.isOn = false})
+    }
 }
