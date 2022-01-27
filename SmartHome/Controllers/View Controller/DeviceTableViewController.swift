@@ -26,7 +26,7 @@ class DeviceTableViewController: UITableViewController {
        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DeviceCell", for: indexPath) as? DeviceTableViewCell else {return UITableViewCell()}
         let deviceToUpdate = DeviceController.sharedInstance.devices[indexPath.row]
 //        cell.delegate = self
-//        cell.updateViews(device: deviceToUpdate)
+            cell.updateViews(device: deviceToUpdate)
         
         
         return cell
@@ -51,6 +51,9 @@ class DeviceTableViewController: UITableViewController {
         present(alertController, animated: true)
     }
     
+    @IBAction func addButton(_ sender: Any) {
+        presentNewDeviceAlertController()
+    }
     
     
     
