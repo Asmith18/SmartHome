@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8YG-Y1-F7P">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Smart Home-->
+        <scene sceneID="Ogj-OX-vds">
+            <objects>
+                <tableViewController id="Uze-zt-zJr" customClass="DeviceTableViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="aAO-41-MVN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DeviceCell" rowHeight="86" id="fzK-pj-jid" customClass="DeviceTableViewCell" customModule="SmartHome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="86"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fzK-pj-jid" id="cUE-ln-MPw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="opJ-j3-K68">
+                                            <rect key="frame" x="36" y="19" width="374" height="40"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(DeviceName)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwH-Np-RHH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="317" height="40"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NQn-7V-iiq">
+                                                    <rect key="frame" x="325" y="0.0" width="51" height="40"/>
+                                                    <connections>
+                                                        <action selector="powerSwitchToggled:" destination="fzK-pj-jid" eventType="valueChanged" id="DDy-0h-o9A"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="opJ-j3-K68" firstAttribute="trailing" secondItem="cUE-ln-MPw" secondAttribute="trailingMargin" constant="16" id="4KV-8M-bFB"/>
+                                        <constraint firstItem="opJ-j3-K68" firstAttribute="leading" secondItem="cUE-ln-MPw" secondAttribute="leadingMargin" constant="16" id="EyQ-eZ-QuY"/>
+                                        <constraint firstItem="opJ-j3-K68" firstAttribute="top" secondItem="cUE-ln-MPw" secondAttribute="topMargin" constant="8" id="P6F-WP-jiu"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="opJ-j3-K68" secondAttribute="bottom" constant="16" id="dSz-wZ-7Lp"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="deviceNameTextLabel" destination="vwH-Np-RHH" id="n0Y-bn-4Sf"/>
+                                    <outlet property="powerSwitchToggle" destination="NQn-7V-iiq" id="x9K-d2-WCG"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Uze-zt-zJr" id="0v5-dt-Jdj"/>
+                            <outlet property="delegate" destination="Uze-zt-zJr" id="4wd-5D-ip2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Smart Home" id="VAc-Jx-tjb">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="NNQ-Hf-Qhk"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0P2-Zh-l6J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473.91304347826093" y="119.86607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bBz-ep-3SR">
+            <objects>
+                <navigationController id="8YG-Y1-F7P" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Awz-zt-1Wr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Uze-zt-zJr" kind="relationship" relationship="rootViewController" id="Wge-yD-IJg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HZS-GL-Wem" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-414" y="120"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

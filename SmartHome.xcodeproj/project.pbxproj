@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		C270CA5B27A31349005A5372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270CA5A27A31349005A5372 /* AppDelegate.swift */; };
 		C270CA5D27A31349005A5372 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270CA5C27A31349005A5372 /* SceneDelegate.swift */; };
-		C270CA5F27A31349005A5372 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270CA5E27A31349005A5372 /* ViewController.swift */; };
 		C270CA6227A31349005A5372 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C270CA6027A31349005A5372 /* Main.storyboard */; };
 		C270CA6427A3134B005A5372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C270CA6327A3134B005A5372 /* Assets.xcassets */; };
 		C270CA6727A3134B005A5372 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C270CA6527A3134B005A5372 /* LaunchScreen.storyboard */; };
+		C270CA7827A31A09005A5372 /* DeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270CA7727A31A09005A5372 /* DeviceTableViewController.swift */; };
+		C270CA7A27A31BAE005A5372 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270CA7927A31BAE005A5372 /* DeviceTableViewCell.swift */; };
+		C270CA7C27A31C48005A5372 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270CA7B27A31C48005A5372 /* Device.swift */; };
+		C270CA7E27A31D17005A5372 /* DeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270CA7D27A31D17005A5372 /* DeviceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C270CA5727A31349005A5372 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C270CA5A27A31349005A5372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C270CA5C27A31349005A5372 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C270CA5E27A31349005A5372 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C270CA6127A31349005A5372 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C270CA6327A3134B005A5372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C270CA6627A3134B005A5372 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C270CA6827A3134B005A5372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C270CA7727A31A09005A5372 /* DeviceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewController.swift; sourceTree = "<group>"; };
+		C270CA7927A31BAE005A5372 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		C270CA7B27A31C48005A5372 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		C270CA7D27A31D17005A5372 /* DeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +62,10 @@
 		C270CA5927A31349005A5372 /* SmartHome */ = {
 			isa = PBXGroup;
 			children = (
+				C270CA7127A3178D005A5372 /* Views */,
+				C270CA7027A3177F005A5372 /* Models */,
+				C270CA6F27A31751005A5372 /* Controllers */,
 				C270CA6E27A31360005A5372 /* Resources */,
-				C270CA5E27A31349005A5372 /* ViewController.swift */,
-				C270CA6027A31349005A5372 /* Main.storyboard */,
 			);
 			path = SmartHome;
 			sourceTree = "<group>";
@@ -73,6 +80,56 @@
 				C270CA6827A3134B005A5372 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C270CA6F27A31751005A5372 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C270CA7427A317AC005A5372 /* Custom Cell */,
+				C270CA7327A317A5005A5372 /* Model Controller */,
+				C270CA7227A3179D005A5372 /* View Controller */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C270CA7027A3177F005A5372 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C270CA7B27A31C48005A5372 /* Device.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C270CA7127A3178D005A5372 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C270CA6027A31349005A5372 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C270CA7227A3179D005A5372 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C270CA7727A31A09005A5372 /* DeviceTableViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		C270CA7327A317A5005A5372 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C270CA7D27A31D17005A5372 /* DeviceController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		C270CA7427A317AC005A5372 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C270CA7927A31BAE005A5372 /* DeviceTableViewCell.swift */,
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +203,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C270CA5F27A31349005A5372 /* ViewController.swift in Sources */,
 				C270CA5B27A31349005A5372 /* AppDelegate.swift in Sources */,
+				C270CA7827A31A09005A5372 /* DeviceTableViewController.swift in Sources */,
 				C270CA5D27A31349005A5372 /* SceneDelegate.swift in Sources */,
+				C270CA7E27A31D17005A5372 /* DeviceController.swift in Sources */,
+				C270CA7A27A31BAE005A5372 /* DeviceTableViewCell.swift in Sources */,
+				C270CA7C27A31C48005A5372 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
